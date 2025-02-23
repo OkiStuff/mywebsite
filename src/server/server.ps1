@@ -10,7 +10,11 @@ function Get-ResourceNotFoundFactory {
 $RouteFactories = @((Get-ResourceNotFoundFactory),
     (Get-RootFactory),
     (Get-InfoFactory),
-    (Get-StaticFactory))
+    (Get-StaticFactory),
+    (Get-PostsFactory),
+    (Get-BlogFactory) ,
+    (Get-PostFactory)
+)
 [hashtable]$Routes = @{}
 
 foreach ($route in $RouteFactories) {
